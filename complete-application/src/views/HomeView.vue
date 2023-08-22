@@ -1,0 +1,14 @@
+<template>
+  <div class="column-container">
+    <div class="content-container">
+      <div style="margin-bottom: 100px;">
+        <h1>Welcome to Changebank</h1>
+        <p>To get started, <a style="cursor: pointer">log in or create a new account</a>.</p>
+      </div>
+    </div>
+
+    <div style="flex: 0">
+      <img src="@/assets/money.jpg" style="max-width: 800px;" alt=""/>
+    </div>
+  </div>
+</template>
