@@ -2,6 +2,15 @@ import {createRouter, createWebHistory} from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import {useFusionAuth} from "@fusionauth/vue-sdk";
 
+const routeGuard = (loggedIn: boolean, fallback: string) => {
+  return () => {
+    const fusionAuth = useFusionAuth();
+    if (fusionAuth.isLoggedIn() !== loggedIn) {
+      return fallback;
+    }
+  }
+}
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -9,23 +18,19 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: HomeView,
-      beforeEnter: () => {
-        const fusionAuth = useFusionAuth();
-        if (fusionAuth.isLoggedIn()) {
-          return '/account';
-        }
-      }
+      beforeEnter: routeGuard(false, '/account')
     },
     {
       path: '/account',
       name: 'account',
       component: () => import('../views/AccountView.vue'),
-      beforeEnter: () => {
-        const fusionAuth = useFusionAuth();
-        if (!fusionAuth.isLoggedIn()) {
-          return '/';
-        }
-      }
+      beforeEnter: routeGuard(true, '/')
+    },
+    {
+      path: '/make-change',
+      name: 'make-change',
+      component: () => import('../views/MakeChangeView.vue'),
+      beforeEnter: routeGuard(true, '/')
     },
     {path: '/:pathMatch(.*)*', redirect: '/'},
   ]
