@@ -27,8 +27,8 @@ const userInfo = ref<UserInfo | null>(null);
 const fusionAuth = useFusionAuth();
 
 onMounted(async () => {
-    if (fusionAuth.isLoggedIn()) {
-      userInfo.value = await fusionAuth.getUserInfo();
-    }
-  });
+  if (fusionAuth.isLoggedIn()) {
+    userInfo.value = await fusionAuth.getUserInfo();
+  }
+});
 </script>
