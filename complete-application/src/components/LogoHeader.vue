@@ -4,31 +4,22 @@
 
     <RequireAuth>
       <div class="h-row">
-        <p class="header-email" v-if="userInfo">
+        <p class="header-email" v-if="userInfo?.email">
           {{ userInfo.email }}
         </p>
-        <a class="button-lg" style="cursor: pointer" @click="fusionAuth.logout()">Logout</a>
+        <a class="button-lg" style="cursor: pointer" @click="logout()">Logout</a>
       </div>
     </RequireAuth>
 
     <RequireAnonymous>
-      <a class="button-lg" style="cursor: pointer" @click="fusionAuth.login()">Login</a>
+      <a class="button-lg" style="cursor: pointer" @click="login()">Login</a>
     </RequireAnonymous>
 
   </div>
 </template>
 
 <script setup lang="ts">
-import {useFusionAuth, type UserInfo} from "@fusionauth/vue-sdk";
-import {onMounted, ref} from "vue";
+import {useFusionAuth} from "@fusionauth/vue-sdk";
 
-const userInfo = ref<UserInfo | null>(null);
-
-const fusionAuth = useFusionAuth();
-
-onMounted(async () => {
-  if (fusionAuth.isLoggedIn()) {
-    userInfo.value = await fusionAuth.getUserInfo();
-  }
-});
+const {userInfo, login, logout} = useFusionAuth();
 </script>
