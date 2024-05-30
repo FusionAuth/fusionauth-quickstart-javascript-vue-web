@@ -11,7 +11,7 @@ import LogoHeader from "@/components/LogoHeader.vue";
       <MenuBar/>
     </div>
 
-    <div style="flex: 1">
+    <div>
       <RouterView/>
     </div>
   </div>

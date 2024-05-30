@@ -1,18 +1,15 @@
 <template>
   <div class="app-container change-container">
-    <h3>We Make Change</h3>
+    <h3>Make Change</h3>
 
+    <form @submit="makeChange">
+        <div class="change-label">Amount in USD</div>
+        <input class="change-input" name="amount" type="number" step=".01" v-model="amount"/>
+        <input class="change-submit" type="submit" value="Make Change"/>
+    </form>
     <div class="change-message" v-if="change">
       We can make change for {{ dollarUS.format(change.total) }} with {{ change.nickels }} nickels and {{ change.pennies }} pennies!
     </div>
-
-    <form @submit="makeChange">
-      <div class="h-row">
-        <div class="change-label">Amount in USD: $</div>
-        <input class="change-input" name="amount" type="number" step=".01" v-model="amount"/>
-        <input class="change-submit" type="submit" value="Make Change"/>
-      </div>
-    </form>
   </div>
 </template>
 

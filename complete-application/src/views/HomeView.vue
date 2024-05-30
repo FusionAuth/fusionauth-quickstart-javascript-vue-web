@@ -2,23 +2,23 @@
 <template>
   <div class="column-container">
     <div class="content-container">
-      <div style="margin-bottom: 100px;">
+      <div>
         <h1>Welcome to Changebank</h1>
-        <p>
-            To get started,
-            <button className="button-redirect" style = "cursor: pointer"  @click="fusionAuth.login()">
-            log in
-            </button>
-            or
-            <button className="button-redirect" style = "cursor: pointer"  @click="fusionAuth.register()">
-            create a new account.
-            </button>
+          <p>
+            Login or create a new account to get started
           </p>
+            <button className="button-lg" style = "cursor: pointer"  @click="fusionAuth.login()">
+            Login
+            </button>
+            <br/>
+            <button className="button-redirect" style = "cursor: pointer"  @click="fusionAuth.register()">
+            Create a new account.
+            </button>
       </div>
     </div>
 
-    <div style="flex: 0">
-      <img src="@/assets/money.jpg" style="max-width: 800px;" alt=""/>
+    <div class="image-container">
+      <img src="@/assets/money.jpg" alt="Coins"/>
     </div>
   </div>
 </template>

@@ -1,6 +1,6 @@
 <template>
   <div id="logo-header">
-    <img src="@/assets/changebank.svg" alt="Change Bank" width="257" height="55"/>
+    <img src="@/assets/changebank.svg" alt="Change Bank" width="259" height="70"/>
 
     <RequireAuth>
       <div class="h-row">
