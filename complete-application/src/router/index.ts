@@ -18,13 +18,8 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: HomeView,
-      beforeEnter: routeGuard(false, '/account')
-    },
-    {
-      path: '/logged-out',
-      name: 'home',
-      component: HomeView,
-      beforeEnter: routeGuard(false, '/account')
+      beforeEnter: routeGuard(false, '/account'),
+      alias: '/logged-out'
     },
     {
       path: '/account',
