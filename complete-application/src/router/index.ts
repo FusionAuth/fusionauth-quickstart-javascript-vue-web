@@ -21,6 +21,12 @@ const router = createRouter({
       beforeEnter: routeGuard(false, '/account')
     },
     {
+      path: '/logged-out',
+      name: 'home',
+      component: HomeView,
+      beforeEnter: routeGuard(false, '/account')
+    },
+    {
       path: '/account',
       name: 'account',
       component: () => import('../views/AccountView.vue'),
