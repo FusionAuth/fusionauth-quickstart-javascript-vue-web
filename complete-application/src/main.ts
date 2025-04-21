@@ -10,9 +10,9 @@ const app = createApp(App)
 
 app.use(FusionAuthVuePlugin, {
   clientId: 'e9fdb985-9173-4e01-9d73-ac2d60d1dc8e',
-  serverUrl: 'http://localhost:9011',
-  redirectUri: 'http://localhost:5173',
-  postLogoutRedirectUri: 'http://localhost:5173/logged-out',
+  serverUrl: 'https://auth.codegremlins.net',
+  redirectUri: 'http://changebank.codegremlins.net',
+  postLogoutRedirectUri: 'http://changebank.codegremlins.net/logged-out',
   shouldAutoFetchUserInfo: true,
   shouldAutoRefresh: true,
   scope: 'openid email profile offline_access'
