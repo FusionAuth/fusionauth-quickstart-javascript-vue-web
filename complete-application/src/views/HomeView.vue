@@ -3,7 +3,7 @@
   <div class="column-container">
     <div class="content-container">
       <div>
-        <h1>Welcome to Changebank v2</h1>
+        <h1>Welcome to Changebank v3</h1>
           <p>
             Login or create a new account to get started
           </p>
