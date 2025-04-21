@@ -9,7 +9,7 @@ import FusionAuthVuePlugin from '@fusionauth/vue-sdk';
 const app = createApp(App)
 
 app.use(FusionAuthVuePlugin, {
-  clientId: 'e9fdb985-9173-4e01-9d73-ac2d60d1dc8e',
+  clientId: 'ec526002-35cc-4e6e-8f5b-0e4fba2b08c8',
   serverUrl: 'https://auth.codegremlins.net',
   redirectUri: 'http://changebank.codegremlins.net',
   postLogoutRedirectUri: 'http://changebank.codegremlins.net/logged-out',
