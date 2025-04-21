@@ -12,7 +12,7 @@ app.use(FusionAuthVuePlugin, {
   clientId: 'ec526002-35cc-4e6e-8f5b-0e4fba2b08c8',
   serverUrl: 'https://auth.codegremlins.net',
   redirectUri: 'https://changebank.codegremlins.net',
-  postLogoutRedirectUri: 'https://changebank.codegremlins.net/logged-out',
+  postLogoutRedirectUri: 'https://changebank.codegremlins.net',
   shouldAutoFetchUserInfo: true,
   shouldAutoRefresh: true,
   scope: 'openid email profile offline_access'
