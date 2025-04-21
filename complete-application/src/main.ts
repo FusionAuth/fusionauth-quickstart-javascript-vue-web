@@ -10,7 +10,7 @@ const app = createApp(App)
 
 app.use(FusionAuthVuePlugin, {
   clientId: 'e9fdb985-9173-4e01-9d73-ac2d60d1dc8e',
-  serverUrl: 'https://glorious-mostly-giraffe.ngrok-free.app',
+  serverUrl: 'https://fatestlogin.ngrok.dev',
   redirectUri: 'http://changebank.codegremlins.net',
   postLogoutRedirectUri: 'http://changebank.codegremlins.net/logged-out',
   shouldAutoFetchUserInfo: true,
