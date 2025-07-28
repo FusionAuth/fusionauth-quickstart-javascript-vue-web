@@ -9,9 +9,9 @@ import FusionAuthVuePlugin from '@fusionauth/vue-sdk';
 const app = createApp(App)
 
 app.use(FusionAuthVuePlugin, {
-  clientId: "a475ef66-384b-4d5d-973b-7a9fd63761c3",
-  redirectUri: "https://fusionauth-quickstart-javascript-angular-web.cashcat.dev",
-  postLogoutRedirectUri: "https://fusionauth-quickstart-javascript-angular-web.cashcat.dev",
+  clientId: "5643bf3c-411b-4bd6-a57d-aec6e1b3e6d2",
+  redirectUri: "https://fusionauth-quickstart-javascript-vue-web.cashcat.dev",
+  postLogoutRedirectUri: "https://fusionauth-quickstart-javascript-vue-web.cashcat.dev",
   serverUrl: "https://auth.cashcat.dev",
   shouldAutoFetchUserInfo: true,
   shouldAutoRefresh: true,
