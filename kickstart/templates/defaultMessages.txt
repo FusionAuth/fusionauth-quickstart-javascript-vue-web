@@ -196,6 +196,7 @@ registration-verification-sent-title=Verification sent
 registration-verification-required-title=Verification required
 registration-verification-required-send-another=Send me another email
 relying-party-id=Relying party Id
+return-to-application=Return to application
 return-to-login=Return to login
 return-to-normal-login=Return to the normal login
 return-to-webauthn-reauth=Return to passkey authentication
@@ -775,3 +776,11 @@ scope-consent-agreement=Click Allow to grant the selected requests to %s, or Can
 [RateLimitedException]=Your request has been rate limited. Please wait a few minutes before making another request.
 
 [MessengerError]=An error occurred while trying to send the message. Please contact your system administrator.
+
+#1.68.0 messages - Two-factor edit
+two-factor-name=Name
+account-two-factor-edit-page-title=Edit Two-Factor
+{placeholder}two-factor-name=Enter a name to identify this method
+edit-two-factor=Edit two-factor
+{description}edit-two-factor=Update the name used to identify this two-factor method.
+[tooLong]twoFactorName=Two-factor method name exceeds the maximum length requirement
